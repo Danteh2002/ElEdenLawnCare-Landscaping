@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="El Eden Lawn Care & Landscaping offers dependable lawn care in Gainesville, Florida.">
+  <title>El Eden | Lawn Care & Landscaping in Gainesville, FL</title>
+  <style>
+    :root { --ink:#102e1a; --forest:#123d25; --green:#5f8737; --lime:#bbd279; --cream:#f8f5ea; --sand:#e7e0cb; --muted:#58705b; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--cream); color:var(--ink); font-family:Arial, Helvetica, sans-serif; }
+    a { color:inherit; }
+    .shell { width:min(1150px, calc(100% - 48px)); margin:auto; }
+    .topbar { background:var(--forest); color:#f7f4e8; font-size:.76rem; letter-spacing:.075em; text-transform:uppercase; }
+    .topbar .shell { min-height:38px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .topbar a { text-decoration:none; font-weight:700; }
+    .topbar a:hover { color:var(--lime); }
+    header { display:flex; justify-content:space-between; align-items:center; min-height:92px; gap:25px; }
+    .logo { display:flex; align-items:center; gap:11px; text-decoration:none; }
+    .logo svg { width:39px; height:39px; color:var(--green); }
+    .logo-main { display:block; color:var(--forest); font-family:Georgia, 'Times New Roman', serif; font-size:1.7rem; font-weight:700; letter-spacing:-.075em; line-height:.85; }
+    .logo-sub { display:block; margin-top:5px; color:var(--muted); font-size:.54rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    nav { display:flex; align-items:center; gap:27px; }
+    nav a { color:var(--forest); font-size:.78rem; font-weight:700; letter-spacing:.08em; text-decoration:none; text-transform:uppercase; }
+    nav a:hover { color:var(--green); }
+    .button { display:inline-flex; justify-content:center; align-items:center; min-height:47px; border:0; padding:0 22px; background:var(--green); color:white; font-size:.76rem; font-weight:700; letter-spacing:.1em; text-decoration:none; text-transform:uppercase; transition:transform .2s, background .2s; cursor:pointer; }
+    .button:hover { background:var(--forest); transform:translateY(-2px); }
+    .button.light { background:#f4f2e8; color:var(--forest); }
+    .button.light:hover { background:var(--lime); }
+    .hero { position:relative; min-height:565px; display:flex; align-items:center; overflow:hidden; color:white; background:#1a3920 url('el-eden-hero.png') center/cover no-repeat; }
+    .hero::before { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(9,36,20,.89) 0%, rgba(12,47,25,.72) 38%, rgba(12,45,24,.15) 74%, rgba(12,45,24,.02) 100%); }
+    .hero-inner { position:relative; width:min(1150px, calc(100% - 48px)); margin:auto; padding:70px 0; }
+    .kicker { display:flex; align-items:center; gap:10px; color:#e0ecbe; font-size:.73rem; font-weight:700; letter-spacing:.15em; text-transform:uppercase; }
+    .kicker::before { content:""; width:32px; height:1px; background:currentColor; }
+    h1,h2,h3 { font-family:Georgia, 'Times New Roman', serif; }
+    h1 { max-width:690px; margin:17px 0 18px; font-size:clamp(3.25rem,7.2vw,6.25rem); letter-spacing:-.07em; line-height:.93; }
+    h1 em { color:#cae38c; font-style:normal; }
+    .hero p { max-width:485px; margin:0 0 31px; color:#ebf0df; font-size:1.05rem; line-height:1.65; }
+    .hero-actions { display:flex; flex-wrap:wrap; gap:13px; }
+    .quick-strip { position:relative; margin-top:-1px; background:var(--cream); box-shadow:0 10px 30px rgba(17,51,29,.11); }
+    .quick-strip .shell { display:grid; grid-template-columns:repeat(3,1fr); }
+    .quick { min-height:102px; display:flex; align-items:center; justify-content:center; gap:13px; padding:20px; border-right:1px solid var(--sand); }
+    .quick:last-child { border:0; }
+    .quick svg { flex:none; width:29px; color:var(--green); }
+    .quick span { color:var(--muted); font-size:.7rem; font-weight:700; letter-spacing:.09em; text-transform:uppercase; }
+    .quick strong { display:block; margin-top:4px; color:var(--forest); font-size:.98rem; letter-spacing:0; text-transform:none; }
+    section { padding:100px 0; }
+    .about { display:grid; grid-template-columns:.92fr 1.08fr; gap:clamp(42px,8vw,100px); align-items:center; }
+    .photo-card { min-height:505px; position:relative; background:url('el-eden-detail.png') center/cover; }
+    .photo-card::after { content:'Gainesville, Florida'; position:absolute; right:-22px; bottom:31px; padding:15px 20px; color:#f5f2e7; background:var(--forest); font-size:.69rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    .eyebrow { color:var(--green); font-size:.73rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+    h2 { max-width:550px; margin:13px 0 18px; color:var(--forest); font-size:clamp(2.35rem,4vw,4rem); letter-spacing:-.06em; line-height:1; }
+    .lead { max-width:530px; color:#536754; font-size:1.04rem; line-height:1.75; }
+    .values { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:31px; }
+    .value { padding-top:15px; border-top:1px solid #bdcaa4; }
+    .value strong { display:block; color:var(--forest); font-size:.83rem; letter-spacing:.06em; text-transform:uppercase; }
+    .value span { display:block; margin-top:7px; color:#687966; font-size:.82rem; line-height:1.4; }
+    .services { background:#edf0e1; }
+    .section-top { display:flex; align-items:end; justify-content:space-between; gap:28px; margin-bottom:39px; }
+    .section-top h2 { margin-bottom:0; }
+    .section-top p { max-width:300px; margin:0; color:var(--muted); font-size:.96rem; line-height:1.6; }
+    .service-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; background:#cbd7b6; border:1px solid #cbd7b6; }
+    .service { min-height:0; padding:0 0 27px; overflow:hidden; background:var(--cream); transition:background .2s, transform .2s; }
+    .service:hover { background:#fdfcf6; transform:translateY(-3px); }
+    .service-photo { display:block; width:100%; height:184px; object-fit:cover; object-position:center; }
+    .service h3 { margin:22px 27px 0; color:var(--forest); font-size:1.35rem; letter-spacing:-.04em; }
+    .service p { margin:7px 27px 0; color:#667564; font-size:.85rem; line-height:1.5; }
+    .work { padding-bottom:100px; }
+    .work-heading { display:flex; align-items:end; justify-content:space-between; gap:28px; margin-bottom:35px; }
+    .work-heading h2 { margin-bottom:0; }
+    .work-heading p { max-width:310px; margin:0; color:var(--muted); font-size:.96rem; line-height:1.6; }
+    .work-grid { display:grid; grid-template-columns:1.2fr .8fr 1fr; gap:15px; }
+    .work-card { min-height:305px; position:relative; overflow:hidden; background-position:center; background-size:cover; }
+    .work-card:first-child { background-image:url('el-eden-hero.png'); }
+    .work-card:nth-child(2) { background-image:url('el-eden-detail.png'); }
+    .work-card:nth-child(3) { background-image:url('el-eden-edging.png'); }
+    .work-card::after { content:""; position:absolute; inset:0; background:linear-gradient(0deg,rgba(9,40,20,.7),transparent 55%); }
+    .work-caption { position:absolute; z-index:1; bottom:20px; left:22px; color:white; }
+    .work-caption span { display:block; color:#e1eebd; font-size:.66rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    .work-caption strong { display:block; margin-top:5px; font-family:Georgia, 'Times New Roman', serif; font-size:1.35rem; letter-spacing:-.04em; }
+    .quote-section { background:var(--forest); color:#fff; }
+    .quote-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:clamp(42px,8vw,100px); align-items:start; }
+    .quote-section h2 { color:#fff; }
+    .quote-section .lead { color:#dbe7c6; }
+    .contact-list { display:grid; gap:14px; margin-top:32px; }
+    .contact-list a { color:#fff; font-weight:700; text-decoration:none; }
+    .contact-list a:hover { color:var(--lime); }
+    .contact-list span { display:block; margin-bottom:4px; color:#c5d6a6; font-size:.68rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    form { display:grid; grid-template-columns:1fr 1fr; gap:15px; padding:clamp(24px,4vw,38px); background:#f7f4e9; color:var(--forest); }
+    .field.full { grid-column:1/-1; }
+    label { display:block; margin-bottom:7px; color:#587058; font-size:.66rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+    input,select,textarea { width:100%; border:1px solid #cbd4b9; border-radius:0; padding:12px; color:var(--ink); background:#fffef9; font:inherit; font-size:.92rem; }
+    textarea { min-height:92px; resize:vertical; }
+    input:focus,select:focus,textarea:focus { outline:2px solid #9ebb63; outline-offset:1px; }
+    .form-note { min-height:17px; grid-column:1/-1; margin:0; color:#506d3c; font-size:.8rem; }
+    footer { padding:28px 0; background:#0b2716; color:#bfcfaa; }
+    footer .shell { display:flex; justify-content:space-between; gap:15px; font-size:.7rem; letter-spacing:.08em; text-transform:uppercase; }
+    @media (max-width:800px) { .shell,.hero-inner { width:min(100% - 32px,1150px); } nav a:not(.button) { display:none; } .hero { min-height:540px; } .hero::before { background:linear-gradient(90deg,rgba(9,36,20,.88),rgba(12,47,25,.52)); } .about,.quote-grid { grid-template-columns:1fr; } .photo-card { min-height:410px; width:min(100%,530px); } .section-top,.work-heading { align-items:start; flex-direction:column; gap:12px; } .work-grid { grid-template-columns:repeat(3,1fr); } .work-card { min-height:250px; } }
+    @media (max-width:570px) { .topbar .shell { justify-content:center; } .topbar .shell span { display:none; } header { min-height:78px; } .logo-main { font-size:1.45rem; } .button { min-height:43px; padding:0 15px; font-size:.68rem; } h1 { font-size:3.35rem; } .hero { min-height:500px; } .quick-strip .shell { grid-template-columns:1fr; } .quick { min-height:76px; justify-content:flex-start; border-right:0; border-bottom:1px solid var(--sand); } .quick:last-child { border-bottom:0; } section,.work { padding:68px 0; } .service-grid { grid-template-columns:1fr 1fr; } .service-photo { height:145px; } .service h3 { margin:17px 18px 0; font-size:1.15rem; } .service p { margin:6px 18px 0; font-size:.78rem; } .values { grid-template-columns:1fr; gap:14px; } .work-grid { grid-template-columns:1fr; } .work-card { min-height:265px; } form { grid-template-columns:1fr; } .field.full { grid-column:auto; } footer .shell { display:block; text-align:center; line-height:2; } }
+  </style>
+</head>
+<body>
+  <div class="topbar"><div class="shell"><span>Serving Gainesville, Florida</span><a href="tel:3523179423">Call 352-317-9423</a></div></div>
+  <header class="shell">
+    <a class="logo" href="#home" aria-label="El Eden home"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M9 39C15 21 27 10 41 7 37 23 26 35 9 39Z" fill="currentColor"/><path d="M10 39C22 26 31 17 40 8" stroke="#f8f5ea" stroke-width="2"/></svg><span><span class="logo-main">El Edén</span><span class="logo-sub">Lawn Care &amp; Landscaping</span></span></a>
+    <nav><a href="#about">About us</a><a href="#services">Services</a><a class="button" href="#quote">Get a free quote</a></nav>
+  </header>
+  <main>
+    <section class="hero" id="home"><div class="hero-inner"><div class="kicker">Gainesville Lawn Care</div><h1>Your lawn, <em>in full bloom.</em></h1><p>Thoughtful, dependable lawn care and landscaping that makes coming home feel even better.</p><div class="hero-actions"><a class="button light" href="#quote">Request a quote</a><a class="button" href="tel:3523179423">Call now</a></div></div></section>
+    <div class="quick-strip"><div class="shell">
+      <div class="quick"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-4 7-11a7 7 0 0 0-14 0c0 7 7 11 7 11Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.7"/></svg><span>Locally serving<strong>Gainesville, FL</strong></span></div>
+      <div class="quick"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12.5 10 17 19 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Detail-focused<strong>Every visit</strong></span></div>
+      <div class="quick"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3v18M5 10l7-7 7 7M5 14l7 7 7-7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Easy to reach<strong>Free quotes</strong></span></div>
+    </div></div>
+    <section id="about"><div class="shell about"><div class="photo-card" role="img" aria-label="Cleanly maintained landscaping and lawn"></div><div><div class="eyebrow">The El Edén approach</div><h2>Care you can see from the curb.</h2><p class="lead">At EL EDEN - LAWN CARE &amp; LANDSCAPING, we believe a well-kept yard should feel easy, welcoming, and alive. We bring the right care to every lawn—from regular mowing to the finishing details that make the whole property look its best.</p><div class="values"><div class="value"><strong>Well maintained</strong><span>Clean lines, healthy growth, and an inviting finish.</span></div><div class="value"><strong>Dependable care</strong><span>Simple communication and a job completed with pride.</span></div><div class="value"><strong>Local roots</strong><span>Proudly serving our neighbors in Gainesville.</span></div></div></div></div></section>
+    <section class="services" id="services"><div class="shell"><div class="section-top"><div><div class="eyebrow">What we do</div><h2>Lawn care, thoughtfully done.</h2></div><p>The essential services your lawn needs to look clean, lush, and cared for all season.</p></div><div class="service-grid">
+      <article class="service"><img class="service-photo" src="service-mowing.png" alt="Lawn mower on a freshly cut lawn"><h3>Mowing</h3><p>A neat, even cut for a polished lawn.</p></article>
+      <article class="service"><img class="service-photo" src="service-weed-trimming.png" alt="String trimmer cleaning the edge of a lawn"><h3>Weed Trimming</h3><p>Clean up the places the mower cannot reach.</p></article>
+      <article class="service"><img class="service-photo" src="service-edging.png" alt="Crisp lawn edge beside a concrete driveway"><h3>Edging</h3><p>Crisp borders along beds, walks, and driveways.</p></article>
+      <article class="service"><img class="service-photo" src="service-blowing.png" alt="Leaf blower clearing grass clippings from a driveway"><h3>Blowing</h3><p>A tidy finish after every lawn service.</p></article>
+      <article class="service"><img class="service-photo" src="service-shrub-trimming.png" alt="Hedge shears trimming a green shrub"><h3>Shrub Trimming</h3><p>Shape and refresh your established greenery.</p></article>
+      <article class="service"><img class="service-photo" src="service-weed-removal.png" alt="Freshly weeded garden bed with removed weeds"><h3>Weed Removal</h3><p>Clear unwanted growth for a cleaner landscape.</p></article>
+    </div></div></section>
+    <section class="work" id="work"><div class="shell"><div class="work-heading"><div><div class="eyebrow">Our work</div><h2>The details make the difference.</h2></div><p>Healthy lawns, crisp edges, and outdoor spaces that are ready to enjoy.</p></div><div class="work-grid"><div class="work-card"><div class="work-caption"><span>Freshly cut</span><strong>Striped lawn care</strong></div></div><div class="work-card"><div class="work-caption"><span>Refined greenery</span><strong>Shrub trimming</strong></div></div><div class="work-card"><div class="work-caption"><span>A clean finish</span><strong>Crisp edging</strong></div></div></div></div></section>
+    <section class="quote-section" id="quote"><div class="shell quote-grid"><div><div class="eyebrow" style="color:#cfe395">Let’s get started</div><h2>Get your free quote.</h2><p class="lead">Tell us a little about your yard and the work you need. We’ll be in touch soon.</p><div class="contact-list"><div><span>Call or text</span><a href="tel:3523179423">352-317-9423</a></div><div><span>Email</span><a href="mailto:Eleden.lawncare@outlook.com">Eleden.lawncare@outlook.com</a></div></div></div>
+      <form id="quote-form"><div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" required></div><div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div><div class="field full"><label for="service">Service needed</label><select id="service" name="service"><option>Mowing</option><option>Weed Trimming</option><option>Edging</option><option>Blowing</option><option>Shrub Trimming</option><option>Weed Removal</option><option>More than one service</option></select></div><div class="field full"><label for="message">Tell us about your yard (optional)</label><textarea id="message" name="message" placeholder="For example: size of yard, address, or services you need."></textarea></div><button class="button" type="submit">Send quote request</button><p class="form-note" id="form-note" aria-live="polite"></p></form>
+    </div></section>
+  </main>
+  <footer><div class="shell"><span>© EL EDEN - LAWN CARE &amp; LANDSCAPING</span><span>Gainesville, Florida</span></div></footer>
+  <script>
+    document.getElementById('quote-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value.trim();
+      const subject = encodeURIComponent('Quote request from ' + name);
+      const body = encodeURIComponent('Name: ' + name + '\nPhone: ' + phone + '\nService: ' + service + '\n\nYard details:\n' + (message || 'Not provided'));
+      document.getElementById('form-note').textContent = 'Opening your email app to send your request…';
+      window.location.href = 'mailto:Eleden.lawncare@outlook.com?subject=' + subject + '&body=' + body;
+    });
+  </script>
+</body>
+</html>
